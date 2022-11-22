@@ -1,1 +1,12 @@
-<p>image-compression works!</p>
+<button mat-raised-button>test</button>
+
+<input
+  style="display: none"
+  type="file" (change)="onFileChanged($event)"
+  #fileInput>
+<button (click)="fileInput.click()">Select File</button>
+<button *ngIf="url" (click)="onUpload()">Upload!</button>
+
+
+<img [src]="url" *ngIf="url">
+
